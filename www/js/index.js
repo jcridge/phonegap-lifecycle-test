@@ -9,12 +9,12 @@ var launched_count = 0;
 	
 	function updateDisplay() {
 		$("#launched").text("Application launched: " + launched_count);
-		$("#resumed").text("Application paused: " + paused_count + " How many iPhones should Mike buy?");
+		$("#resumed").text("Application paused: " + paused_count);
 		$("#paused").text("Application resumed: " + resumed_count);
 	}
 	
-	function treesTest(){
-		$("#test").text("trees");
+	function testFunction(){
+		document.getElementById("demo").innerHTML = "Mike";
 	}
 
     // device APIs are available
@@ -42,5 +42,4 @@ var launched_count = 0;
 		resumed_count++;
 		test();
 		updateDisplay();
-		treesTest();
     }
