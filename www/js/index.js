@@ -2,6 +2,21 @@ var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
 
+	window.plugins.flashlight.available(function(isAvailable) {
+	if (isAvailable) {
+
+	// switch on
+	window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
+
+	// switch off after 3 seconds
+	setTimeout(function() {
+		window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+	}, 3000);
+
+	} else {
+		alert("Flashlight not available on this device");
+	}
+
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
 		console.log("device ready");
@@ -43,19 +58,4 @@ var launched_count = 0;
 		test();
 		updateDisplay();
     }
-	
-	window.plugins.flashlight.available(function(isAvailable) {
-	if (isAvailable) {
-
-    // switch on
-    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
-
-    // switch off after 3 seconds
-    setTimeout(function() {
-      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
-    }, 3000);
-
-	} else {
-		alert("Flashlight not available on this device");
-	}
-	});
+;
