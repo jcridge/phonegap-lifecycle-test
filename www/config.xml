@@ -15,8 +15,16 @@
     <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
         WBS Computing
     </author>
-
+	
+	<gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.1" />
+	
+	<!-- for iOS -->
+	<feature name="Flashlight">
+		<param name="ios-package" value="Flashlight" />
+	</feature>
+	
     <preference name="permissions"                value="none"/>   
 	
 	<access origin="*"/>
 </widget>
+
