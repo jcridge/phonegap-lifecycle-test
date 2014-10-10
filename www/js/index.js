@@ -9,8 +9,13 @@ var launched_count = 0;
 	
 	function updateDisplay() {
 		$("#launched").text("Application launched: " + launched_count);
-		$("#resumed").text("Application paused: " + paused_count + "How many iPhones should Mike buy?");
+		$("#resumed").text("Application paused: " + paused_count + " How many iPhones should Mike buy?");
 		$("#paused").text("Application resumed: " + resumed_count);
+		$("#test").text(test());
+	}
+	
+	function test() {
+		document.write("trees");
 	}
 
 
@@ -37,5 +42,6 @@ var launched_count = 0;
 	function onResume() {
 		alert("resume");
 		resumed_count++;
+		test();
 		updateDisplay();
     }
